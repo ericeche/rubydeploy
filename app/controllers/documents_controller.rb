@@ -1,4 +1,5 @@
 class DocumentsController < ApplicationController
+  
   before_action :set_document, only: [:show, :edit, :update, :destroy]
 
   # GET /documents
@@ -58,6 +59,11 @@ class DocumentsController < ApplicationController
       format.html { redirect_to documents_url }
       format.json { head :no_content }
     end
+  end
+
+  def import
+    @document.import(parms[:file])
+    redirect_to root_url, alert: "Activity Data Imported!" 
   end
 
   private

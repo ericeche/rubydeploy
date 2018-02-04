@@ -1,0 +1,2 @@
+class BpciAdjmntFfactorsR < ApplicationRecord
+end

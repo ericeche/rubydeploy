@@ -1,5 +1,9 @@
 Fileupload::Application.routes.draw do
-  resources :documents
+  resources :bpci_adjmnt_factor_rs
+  resources :bpci_adjmnt_ffactors_rs
+  resources :documents do
+    collection { post :import }
+   end
 
   root to: redirect('/documents')
   # The priority is based upon order of creation: first created -> highest priority.

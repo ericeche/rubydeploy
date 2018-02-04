@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bpci Adjmnt Ffactors Rs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Provider ccn</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bpci_adjmnt_ffactors_rs.each do |bpci_adjmnt_ffactors_r| %>
+      <tr>
+        <td><%= bpci_adjmnt_ffactors_r.PROVIDER_CCN %></td>
+        <td><%= link_to 'Show', bpci_adjmnt_ffactors_r %></td>
+        <td><%= link_to 'Edit', edit_bpci_adjmnt_ffactors_r_path(bpci_adjmnt_ffactors_r) %></td>
+        <td><%= link_to 'Destroy', bpci_adjmnt_ffactors_r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bpci Adjmnt Ffactors R', new_bpci_adjmnt_ffactors_r_path %>

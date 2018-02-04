@@ -1,0 +1,2 @@
+module BpciAdjmntFactorRsHelper
+end

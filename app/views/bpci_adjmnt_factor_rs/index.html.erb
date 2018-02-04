@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bpci Adjmnt Factor Rs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Provider ccn</th>
+      <th>Top 25th perc fy15</th>
+      <th>Top 25th perc fy16</th>
+      <th>Hac adjmnt factor</th>
+      <th>Ltch irf adjmnt factor</th>
+      <th>Fr12 apu reduction</th>
+      <th>Fr15 apu reduction</th>
+      <th>Fr16 apu reduction</th>
+      <th>Apu iqr adjmnt factor fy15</th>
+      <th>Apu iqr adjmnt factor fy16</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bpci_adjmnt_factor_rs.each do |bpci_adjmnt_factor_r| %>
+      <tr>
+        <td><%= bpci_adjmnt_factor_r.PROVIDER_CCN %></td>
+        <td><%= bpci_adjmnt_factor_r.TOP_25TH_PERC_FY15 %></td>
+        <td><%= bpci_adjmnt_factor_r.TOP_25TH_PERC_FY16 %></td>
+        <td><%= bpci_adjmnt_factor_r.HAC_ADJMNT_FACTOR %></td>
+        <td><%= bpci_adjmnt_factor_r.LTCH_IRF_ADJMNT_FACTOR %></td>
+        <td><%= bpci_adjmnt_factor_r.FR12_APU_REDUCTION %></td>
+        <td><%= bpci_adjmnt_factor_r.FR15_APU_REDUCTION %></td>
+        <td><%= bpci_adjmnt_factor_r.FR16_APU_REDUCTION %></td>
+        <td><%= bpci_adjmnt_factor_r.APU_IQR_ADJMNT_FACTOR_FY15 %></td>
+        <td><%= bpci_adjmnt_factor_r.APU_IQR_ADJMNT_FACTOR_FY16 %></td>
+        <td><%= link_to 'Show', bpci_adjmnt_factor_r %></td>
+        <td><%= link_to 'Edit', edit_bpci_adjmnt_factor_r_path(bpci_adjmnt_factor_r) %></td>
+        <td><%= link_to 'Destroy', bpci_adjmnt_factor_r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bpci Adjmnt Factor R', new_bpci_adjmnt_factor_r_path %>

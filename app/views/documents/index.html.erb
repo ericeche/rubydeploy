@@ -17,6 +17,7 @@
         <td><%= document.filename %></td>
         <td><%= button_to 'Download', document, method: :get %></td>
         <td><%= button_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Import CSV', document, method: :import %></td>
       </tr>
     <% end %>
   </tbody>

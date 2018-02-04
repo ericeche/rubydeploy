@@ -1,0 +1,22 @@
+<%= form_with(model: bpci_adjmnt_ffactors_r, local: true) do |form| %>
+  <% if bpci_adjmnt_ffactors_r.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bpci_adjmnt_ffactors_r.errors.count, "error") %> prohibited this bpci_adjmnt_ffactors_r from being saved:</h2>
+
+      <ul>
+      <% bpci_adjmnt_ffactors_r.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :PROVIDER_CCN %>
+    <%= form.text_field :PROVIDER_CCN, id: :bpci_adjmnt_ffactors_r_PROVIDER_CCN %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
