@@ -1,5 +1,5 @@
 class Document < ActiveRecord::Base
- require 'csv'
+ 
   validate :file_size_under_one_mb
 
   def initialize(params = {})
@@ -12,11 +12,7 @@ class Document < ActiveRecord::Base
     end
   end
 
-  def self.import(file)
-    CSV.foreach(file.path, headers: true) do |row|
-      Document.create! row.to_hash
-    end  
-  end
+ 
 
   private
 

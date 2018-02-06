@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   
-  before_action :set_document, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: [:show, :edit, :update, :destroy, :import]
 
   # GET /documents
   # GET /documents.json
@@ -62,7 +62,7 @@ class DocumentsController < ApplicationController
   end
 
   def import
-    @document.import(parms[:file])
+    BpciAdjmntFactorR.import(@document)
     redirect_to root_url, alert: "Activity Data Imported!" 
   end
 

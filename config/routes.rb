@@ -1,8 +1,8 @@
 Fileupload::Application.routes.draw do
-  resources :bpci_adjmnt_factor_rs
-  resources :bpci_adjmnt_ffactors_rs
+  
+
   resources :documents do
-    collection { post :import }
+    member { post :import } 
    end
 
   root to: redirect('/documents')
